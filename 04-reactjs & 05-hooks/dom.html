@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="myElement">Original Text</h1>
+    <button onclick="updateText()">Update Text</button>
+
+    <ul id="list"></ul>
+
+    <script>
+      function updateText() {
+        const element = document.getElementById('myElement');
+        element.innerText = 'Updated Text';
+        element.style.color = 'pink';
+        element.style.fontSize = '48px';
+
+        const ul = document.getElementById('list');
+        ul.innerHTML += '<li>New list</li>';
+      }
+    </script>
+  </body>
+</html>

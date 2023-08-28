@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      body {
+        color: white;
+        text-align: center;
+        margin: 0;
+      }
+
+      #content {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 12px;
+      }
+
+      #content div {
+        background-color: lightskyblue;
+        padding: 30px;
+      }
+
+      #content div:nth-child(even) {
+        background-color: grey;
+      }
+
+      .box1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+
+      .box2 {
+        grid-column: 4/10;
+      }
+
+      .box3 {
+        grid-column: 1/10;
+      }
+
+      .box4 {
+        grid-column: 1/4;
+      }
+
+      .box5 {
+        grid-column: 4/7;
+        grid-row: 3/5;
+      }
+
+      .box6 {
+        grid-column: 7/10;
+      }
+
+      .box7 {
+        grid-column: 1/8;
+      }
+
+      @media screen and (max-width: 768px) {
+        #content {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+      <div class="box4">4</div>
+      <div class="box5">5</div>
+      <div class="box6">6</div>
+      <div class="box7">7</div>
+      <div class="box8">8</div>
+      <div class="box9">9</div>
+    </div>
+  </body>
+</html>

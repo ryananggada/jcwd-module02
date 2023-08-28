@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animate</title>
+    <link rel="stylesheet" href="./animate.css" type="text/css" />
+  </head>
+  <body>
+    <button id="animateMe">Click me</button>
+    <div class="box" id="box1"></div>
+
+    <script>
+      const box1 = document.getElementById('box1');
+      const btn = document.getElementById('animateMe');
+      btn.addEventListener('click', () => {
+        box1.classList.toggle('moved');
+      });
+    </script>
+  </body>
+</html>
